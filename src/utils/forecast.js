@@ -8,7 +8,7 @@ forecast = (latitude, longitude, callback)=>{
     } else if(body.error){
         callback('location not found!',undefined);
     } else{
-        callback(undefined,body.daily.data[0].summary +" It's currently " + body.currently.temperature + "\xB0C (degree celsius) out. There is " +  body.currently.precipProbability + "% chance of rain.")
+        callback(undefined,body.daily.data[0].summary +" It's currently " + body.currently.temperature + "\xB0C (degree celsius) out. The highest temperature today is " + body.daily.data[0].temperatureHigh + "\xB0C with lowest of "+ body.daily.data[0].temperatureLow + "\xB0C. There is " +  body.currently.precipProbability + "% chance of rain.")
     }
 })
 }
