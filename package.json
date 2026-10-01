@@ -1,21 +1,27 @@
 {
-  "name": "web-server",
-  "version": "1.0.0",
+  "name": "weather-website",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js,hbs"
+  "homepage": "https://github.com/Tech1799/weather-website#readme",
+  "bugs": {
+    "url": "https://github.com/Tech1799/weather-website/issues"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tech1799/weather-website.git"
+  },
   "license": "ISC",
+  "author": "bhupinder bhattarai",
+  "type": "commonjs",
+  "main": "./src/app.js",
+  "scripts": {
+    "dev": "nodemon -e js,hbs"
+  },
   "dependencies": {
-    "express": "^4.16.4",
-    "hbs": "^4.0.6",
-    "request": "^2.88.0"
+    "express": "^5.2.1",
+    "hbs": "^4.3.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "dotenv": "^18.0.4"
   }
 }
