@@ -1,18 +1,3 @@
-// const request = require('request');
-
-// forecast = (latitude, longitude, callback)=>{
-//     const url = 'https://api.darksky.net/forecast/e24e1835b658997ac30b473d99f0c6ec/' + encodeURIComponent(latitude) + ',' + encodeURIComponent(longitude) +'?units=si';
-//     request({url, json: true}, (error, {body})=>{
-//     if(error){
-//         callback('unable to connect to weather service!', undefined);
-//     } else if(body.error){
-//         callback('location not found!',undefined);
-//     } else{
-//         callback(undefined,body.daily.data[0].summary +" It's currently " + body.currently.temperature + "\xB0C (degree celsius) out. The highest temperature today is " + body.daily.data[0].temperatureHigh + "\xB0C with lowest of "+ body.daily.data[0].temperatureLow + "\xB0C. There is " +  body.currently.precipProbability + "% chance of rain.")
-//     }
-// })
-// }
-
 const forecast = async (latitude, longitude, callback) => {
   const response = await fetch(
     `https://api.openweathermap.org/data/4.0/onecall/timeline/1day?lat=${latitude}&lon=${longitude}&units=metric&appid=${process.env.OP_WEATHER_TOKEN}`,
